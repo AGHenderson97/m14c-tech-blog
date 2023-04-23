@@ -22,3 +22,7 @@ app.set('view engine', 'handlebars');
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}!`);
 });
+
+// Register dashboard route
+const dashboardRoutes = require('./routes/dashboard');
+app.use('/dashboard', dashboardRoutes);
