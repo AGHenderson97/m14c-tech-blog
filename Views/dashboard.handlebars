@@ -1,0 +1,39 @@
+{{#each posts}}
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">{{title}}</h5>
+      <p class="card-text">{{body}}</p>
+      <p class="card-text"><small class="text-muted">Created on {{createdAt}}</small></p>
+    </div>
+  </div>
+{{/each}}
+
+{{#each posts}}
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">{{title}}</h5>
+      <p class="card-text">{{body}}</p>
+      <p class="card-text"><small class="text-muted">Created on {{createdAt}}</small></p>
+    </div>
+  </div>
+{{/each}}
+
+<form method="POST" action="/dashboard">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title" name="title">
+  </div>
+  <div class="form-group">
+    <label for="body">Body</label>
+    <textarea class="form-control" id="body" name="body"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Create Post</button>
+</form>
+
+{{#each posts}}
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">{{title}}</h5>
+      <p class="card-text">{{body}}</p>
+      <p class="card-text"><small class="text-muted">Created on {{createdAt}}</small></p>
+    </div>
