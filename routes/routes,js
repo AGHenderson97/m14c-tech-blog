@@ -1,10 +1,15 @@
 const express = require('express');
 const router = express.Router();
+const { Post } = require('../models');
 
-// Home page
-router.get('/', (req, res) => {
-  res.render('homepage');
+router.get('/', async (req, res) => {
+  try {
+    const posts = await Post.findAll();
+    res.render('dashboard', { posts });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;
-
