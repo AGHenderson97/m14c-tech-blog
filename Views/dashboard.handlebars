@@ -29,3 +29,11 @@
   </div>
   <button type="submit" class="btn btn-primary">Create Post</button>
 </form>
+
+{{#each posts}}
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">{{title}}</h5>
+      <p class="card-text">{{body}}</p>
+      <p class="card-text"><small class="text-muted">Created on {{createdAt}}</small></p>
+    </div>
