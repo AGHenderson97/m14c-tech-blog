@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Set up routes
-const routes = require('routes.js');
+const routes = require('./routes');
 app.use('/', routes);
 
 // Set up view engine
